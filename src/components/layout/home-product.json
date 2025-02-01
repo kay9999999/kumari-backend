@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_layout_home_products",
+  "info": {
+    "displayName": "home_product",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "price": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Url": {
+      "type": "string"
+    }
+  }
+}

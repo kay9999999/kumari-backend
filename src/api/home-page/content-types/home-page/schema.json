@@ -1,0 +1,108 @@
+{
+  "kind": "singleType",
+  "collectionName": "home_pages",
+  "info": {
+    "singularName": "home-page",
+    "pluralName": "home-pages",
+    "displayName": "Home Page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "hero": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "videos"
+      ]
+    },
+    "Usp": {
+      "type": "component",
+      "repeatable": false,
+      "component": "layout.usp"
+    },
+    "categories": {
+      "type": "component",
+      "repeatable": false,
+      "component": "layout.categories"
+    },
+    "categories_hover": {
+      "type": "component",
+      "repeatable": false,
+      "component": "layout.categories-hover"
+    },
+    "hero_2": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "carousel": {
+      "displayName": "hero_2",
+      "type": "component",
+      "repeatable": false,
+      "component": "layout.hero-2"
+    },
+    "bg_mid": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "store": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "slides": {
+      "type": "component",
+      "repeatable": true,
+      "component": "layout.slider"
+    },
+    "policy": {
+      "type": "component",
+      "repeatable": false,
+      "component": "layout.policy"
+    },
+    "story": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
+    "guide": {
+      "displayName": "guide",
+      "type": "component",
+      "repeatable": true,
+      "component": "layout.guide"
+    },
+    "home_product": {
+      "displayName": "home_product",
+      "type": "component",
+      "repeatable": true,
+      "component": "layout.home-product"
+    }
+  }
+}

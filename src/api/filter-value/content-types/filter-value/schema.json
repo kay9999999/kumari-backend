@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "filter_values",
+  "info": {
+    "singularName": "filter-value",
+    "pluralName": "filter-values",
+    "displayName": "filter_value",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "value": {
+      "type": "string"
+    },
+    "filter": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::filter.filter",
+      "inversedBy": "filter_values"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product.product",
+      "inversedBy": "filter_values"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "mappedBy": "filter_values"
+    },
+    "sub_categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::sub-category.sub-category",
+      "mappedBy": "filter_values"
+    }
+  }
+}

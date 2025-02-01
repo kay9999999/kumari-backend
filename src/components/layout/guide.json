@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_layout_guides",
+  "info": {
+    "displayName": "guide"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

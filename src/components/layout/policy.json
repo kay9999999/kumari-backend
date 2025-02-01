@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_layout_policies",
+  "info": {
+    "displayName": "policy"
+  },
+  "options": {},
+  "attributes": {
+    "shipping": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "return": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "insurance": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "buyback": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

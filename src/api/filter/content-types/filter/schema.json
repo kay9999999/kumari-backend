@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "filters",
+  "info": {
+    "singularName": "filter",
+    "pluralName": "filters",
+    "displayName": "filter",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "filter_group": {
+      "type": "string"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "inversedBy": "filters"
+    },
+    "filter_values": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::filter-value.filter-value",
+      "mappedBy": "filter"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "filter",
+        "option",
+        "both"
+      ]
+    },
+    "sub_categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::sub-category.sub-category",
+      "mappedBy": "filters"
+    }
+  }
+}
