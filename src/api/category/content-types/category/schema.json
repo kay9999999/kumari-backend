@@ -15,9 +15,6 @@
     "name": {
       "type": "string"
     },
-    "slug": {
-      "type": "uid"
-    },
     "products": {
       "type": "relation",
       "relation": "manyToMany",
@@ -35,6 +32,9 @@
       "relation": "manyToMany",
       "target": "api::filter-value.filter-value",
       "inversedBy": "categories"
+    },
+    "slug": {
+      "type": "string"
     }
   }
 }

@@ -21,23 +21,15 @@
     "price": {
       "type": "decimal"
     },
-    "media": {
-      "type": "media",
-      "multiple": true,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ]
-    },
     "type": {
       "type": "enumeration",
       "enum": [
         "new",
         "featured",
         "recommended",
-        "best-seller"
+        "best-seller",
+        "home",
+        "normal"
       ]
     },
     "categories": {
@@ -61,6 +53,33 @@
       "relation": "manyToMany",
       "target": "api::sub-category.sub-category",
       "mappedBy": "products"
+    },
+    "collection": {
+      "type": "string"
+    },
+    "info": {
+      "type": "blocks"
+    },
+    "available_sizes": {
+      "type": "component",
+      "repeatable": false,
+      "component": "layout.sizes"
+    },
+    "weight": {
+      "type": "component",
+      "repeatable": false,
+      "component": "layout.weight"
+    },
+    "imageVariants": {
+      "type": "component",
+      "repeatable": true,
+      "component": "layout.image-variant"
+    },
+    "making_charges": {
+      "type": "decimal"
+    },
+    "other_components": {
+      "type": "decimal"
     }
   }
 }

@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "diamond_pricings",
+  "info": {
+    "singularName": "diamond-pricing",
+    "pluralName": "diamond-pricings",
+    "displayName": "Diamond_Pricing"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "quality": {
+      "type": "string"
+    },
+    "code": {
+      "type": "string"
+    },
+    "crt_from": {
+      "type": "decimal"
+    },
+    "crt_to": {
+      "type": "decimal"
+    },
+    "cost": {
+      "type": "decimal"
+    },
+    "price": {
+      "type": "decimal"
+    }
+  }
+}

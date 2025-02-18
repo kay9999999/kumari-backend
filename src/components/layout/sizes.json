@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_layout_sizes",
+  "info": {
+    "displayName": "Sizes"
+  },
+  "options": {},
+  "attributes": {
+    "size": {
+      "type": "json"
+    },
+    "default_size": {
+      "type": "string"
+    },
+    "size_guide_label": {
+      "type": "string"
+    },
+    "size_guide_link": {
+      "type": "string"
+    }
+  }
+}

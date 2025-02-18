@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_layout_weights",
+  "info": {
+    "displayName": "Weight",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "total_weight": {
+      "type": "string"
+    },
+    "metal_weight": {
+      "type": "string"
+    },
+    "diamond_weight": {
+      "type": "string"
+    },
+    "stone_weight": {
+      "type": "string"
+    },
+    "components_weight": {
+      "type": "string"
+    },
+    "SKU": {
+      "type": "string"
+    }
+  }
+}

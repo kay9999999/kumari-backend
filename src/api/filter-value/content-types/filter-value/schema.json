@@ -38,6 +38,9 @@
       "relation": "manyToMany",
       "target": "api::sub-category.sub-category",
       "mappedBy": "filter_values"
+    },
+    "availability": {
+      "type": "string"
     }
   }
 }

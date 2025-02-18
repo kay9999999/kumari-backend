@@ -43,6 +43,18 @@ export interface LayoutCategoryBanner extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutFeed extends Struct.ComponentSchema {
+  collectionName: 'components_layout_feeds';
+  info: {
+    description: '';
+    displayName: 'Feed';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    path: Schema.Attribute.String;
+  };
+}
+
 export interface LayoutFooter extends Struct.ComponentSchema {
   collectionName: 'components_layout_footers';
   info: {
@@ -113,6 +125,19 @@ export interface LayoutHomeProduct extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutImageVariant extends Struct.ComponentSchema {
+  collectionName: 'components_layout_image_variants';
+  info: {
+    displayName: 'imageVariant';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    metalColor: Schema.Attribute.Enumeration<
+      ['common', 'Rose', 'White', 'Yellow']
+    >;
+  };
+}
+
 export interface LayoutPolicy extends Struct.ComponentSchema {
   collectionName: 'components_layout_policies';
   info: {
@@ -123,6 +148,19 @@ export interface LayoutPolicy extends Struct.ComponentSchema {
     insurance: Schema.Attribute.Media<'images'>;
     return: Schema.Attribute.Media<'images'>;
     shipping: Schema.Attribute.Media<'images'>;
+  };
+}
+
+export interface LayoutSizes extends Struct.ComponentSchema {
+  collectionName: 'components_layout_sizes';
+  info: {
+    displayName: 'Sizes';
+  };
+  attributes: {
+    default_size: Schema.Attribute.String;
+    size: Schema.Attribute.JSON;
+    size_guide_label: Schema.Attribute.String;
+    size_guide_link: Schema.Attribute.String;
   };
 }
 
@@ -153,20 +191,40 @@ export interface LayoutUsp extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutWeight extends Struct.ComponentSchema {
+  collectionName: 'components_layout_weights';
+  info: {
+    description: '';
+    displayName: 'Weight';
+  };
+  attributes: {
+    components_weight: Schema.Attribute.String;
+    diamond_weight: Schema.Attribute.String;
+    metal_weight: Schema.Attribute.String;
+    SKU: Schema.Attribute.String;
+    stone_weight: Schema.Attribute.String;
+    total_weight: Schema.Attribute.String;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'layout.categories': LayoutCategories;
       'layout.categories-hover': LayoutCategoriesHover;
       'layout.category-banner': LayoutCategoryBanner;
+      'layout.feed': LayoutFeed;
       'layout.footer': LayoutFooter;
       'layout.guide': LayoutGuide;
       'layout.header': LayoutHeader;
       'layout.hero-2': LayoutHero2;
       'layout.home-product': LayoutHomeProduct;
+      'layout.image-variant': LayoutImageVariant;
       'layout.policy': LayoutPolicy;
+      'layout.sizes': LayoutSizes;
       'layout.slider': LayoutSlider;
       'layout.usp': LayoutUsp;
+      'layout.weight': LayoutWeight;
     }
   }
 }

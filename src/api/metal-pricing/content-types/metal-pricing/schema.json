@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "metal_pricings",
+  "info": {
+    "singularName": "metal-pricing",
+    "pluralName": "metal-pricings",
+    "displayName": "Metal_Pricing",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "metal_type": {
+      "type": "string"
+    },
+    "code": {
+      "type": "string"
+    },
+    "gravity": {
+      "type": "decimal"
+    },
+    "cost": {
+      "type": "decimal"
+    },
+    "price": {
+      "type": "decimal"
+    }
+  }
+}
