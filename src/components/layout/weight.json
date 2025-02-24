@@ -23,6 +23,9 @@
     },
     "SKU": {
       "type": "string"
+    },
+    "metal_type": {
+      "type": "string"
     }
   }
 }

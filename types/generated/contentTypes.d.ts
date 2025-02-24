@@ -441,6 +441,7 @@ export interface ApiDiamondPricingDiamondPricing
   extends Struct.CollectionTypeSchema {
   collectionName: 'diamond_pricings';
   info: {
+    description: '';
     displayName: 'Diamond_Pricing';
     pluralName: 'diamond-pricings';
     singularName: 'diamond-pricing';
@@ -463,8 +464,23 @@ export interface ApiDiamondPricingDiamondPricing
     > &
       Schema.Attribute.Private;
     price: Schema.Attribute.Decimal;
+    products: Schema.Attribute.Relation<'manyToMany', 'api::product.product'>;
     publishedAt: Schema.Attribute.DateTime;
-    quality: Schema.Attribute.String;
+    quality: Schema.Attribute.Enumeration<
+      [
+        'VS-FG',
+        'VS-HI',
+        'SI-FG',
+        'SI-HI',
+        'SI-JK',
+        'I1-FG',
+        'I1-HI',
+        'I1-JK',
+        'SI-IJ',
+        'VS-GH',
+        'VVS-EF',
+      ]
+    >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -658,6 +674,7 @@ export interface ApiMetalPricingMetalPricing
       Schema.Attribute.Private;
     metal_type: Schema.Attribute.String;
     price: Schema.Attribute.Decimal;
+    products: Schema.Attribute.Relation<'manyToMany', 'api::product.product'>;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -724,6 +741,10 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     description: Schema.Attribute.Text;
+    diamond_pricings: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::diamond-pricing.diamond-pricing'
+    >;
     filter_values: Schema.Attribute.Relation<
       'manyToMany',
       'api::filter-value.filter-value'
@@ -737,6 +758,10 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     making_charges: Schema.Attribute.Decimal;
+    metal_pricings: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::metal-pricing.metal-pricing'
+    >;
     other_components: Schema.Attribute.Decimal;
     price: Schema.Attribute.Decimal;
     publishedAt: Schema.Attribute.DateTime;
@@ -752,7 +777,7 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    weight: Schema.Attribute.Component<'layout.weight', false>;
+    weight: Schema.Attribute.Component<'layout.weight', true>;
   };
 }
 

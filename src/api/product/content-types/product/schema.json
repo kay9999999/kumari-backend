@@ -67,7 +67,7 @@
     },
     "weight": {
       "type": "component",
-      "repeatable": false,
+      "repeatable": true,
       "component": "layout.weight"
     },
     "imageVariants": {
@@ -80,6 +80,18 @@
     },
     "other_components": {
       "type": "decimal"
+    },
+    "metal_pricings": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::metal-pricing.metal-pricing",
+      "mappedBy": "products"
+    },
+    "diamond_pricings": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::diamond-pricing.diamond-pricing",
+      "mappedBy": "products"
     }
   }
 }

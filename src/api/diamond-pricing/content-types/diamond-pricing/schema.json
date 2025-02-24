@@ -4,30 +4,50 @@
   "info": {
     "singularName": "diamond-pricing",
     "pluralName": "diamond-pricings",
-    "displayName": "Diamond_Pricing"
+    "displayName": "Diamond_Pricing",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "quality": {
-      "type": "string"
-    },
-    "code": {
-      "type": "string"
-    },
     "crt_from": {
       "type": "decimal"
     },
     "crt_to": {
       "type": "decimal"
     },
+    "quality": {
+      "type": "enumeration",
+      "enum": [
+        "VS-FG",
+        "VS-HI",
+        "SI-FG",
+        "SI-HI",
+        "SI-JK",
+        "I1-FG",
+        "I1-HI",
+        "I1-JK",
+        "SI-IJ",
+        "VS-GH",
+        "VVS-EF"
+      ]
+    },
+    "code": {
+      "type": "string"
+    },
     "cost": {
       "type": "decimal"
     },
     "price": {
       "type": "decimal"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product.product",
+      "inversedBy": "diamond_pricings"
     }
   }
 }

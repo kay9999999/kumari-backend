@@ -26,6 +26,12 @@
     },
     "price": {
       "type": "decimal"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product.product",
+      "inversedBy": "metal_pricings"
     }
   }
 }
