@@ -9,13 +9,6 @@ module.exports = {
       ? diamondQuality.replace(/\n/g, "").trim()
       : "";
 
-    console.log("Calculating price for product slug:", slug);
-    console.log("Pricing endpoint reached:", {
-      slug,
-      metalCode,
-      diamondQuality: diamondQualityClean,
-    });
-
     const products = await strapi.entityService.findMany(
       "api::product.product",
       {

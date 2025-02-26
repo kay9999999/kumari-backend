@@ -202,7 +202,6 @@ export interface LayoutWeight extends Struct.ComponentSchema {
     diamond_weight: Schema.Attribute.String;
     metal_type: Schema.Attribute.String;
     metal_weight: Schema.Attribute.String;
-    SKU: Schema.Attribute.String;
     stone_weight: Schema.Attribute.String;
     total_weight: Schema.Attribute.String;
   };

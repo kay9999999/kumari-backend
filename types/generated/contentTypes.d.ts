@@ -765,6 +765,7 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
     other_components: Schema.Attribute.Decimal;
     price: Schema.Attribute.Decimal;
     publishedAt: Schema.Attribute.DateTime;
+    sku: Schema.Attribute.String;
     slug: Schema.Attribute.UID<'title'>;
     sub_categories: Schema.Attribute.Relation<
       'manyToMany',

@@ -21,9 +21,6 @@
     "components_weight": {
       "type": "string"
     },
-    "SKU": {
-      "type": "string"
-    },
     "metal_type": {
       "type": "string"
     }
