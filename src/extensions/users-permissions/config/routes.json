@@ -1,0 +1,29 @@
+{
+  "routes": [
+    {
+      "method": "POST",
+      "path": "/api/auth/email-confirmation-check",
+      "handler": "auth.emailConfirmationCheck",
+      "config": {
+        "policies": [],
+        "auth": false
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/auth/email-confirmation",
+      "handler": "auth.emailConfirmation",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/auth/validateToken",
+      "handler": "auth.validateToken",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
